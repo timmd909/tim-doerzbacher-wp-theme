@@ -8,33 +8,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package _s
+ * @package tim-doerzbacher-wp-theme
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses _s_header_style()
+ * @uses tim_doerzbacher_wp_theme_header_style()
  */
-function _s_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( '_s_custom_header_args', array(
+function tim_doerzbacher_wp_theme_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'tim_doerzbacher_wp_theme_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => '_s_header_style',
+		'wp-head-callback'       => 'tim_doerzbacher_wp_theme_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', '_s_custom_header_setup' );
+add_action( 'after_setup_theme', 'tim_doerzbacher_wp_theme_custom_header_setup' );
 
-if ( ! function_exists( '_s_header_style' ) ) :
+if ( ! function_exists( 'tim_doerzbacher_wp_theme_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see _s_custom_header_setup().
+	 * @see tim_doerzbacher_wp_theme_custom_header_setup().
 	 */
-	function _s_header_style() {
+	function tim_doerzbacher_wp_theme_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

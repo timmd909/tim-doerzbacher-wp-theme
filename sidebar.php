@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package _s
+ * @package tim-doerzbacher-wp-theme
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {

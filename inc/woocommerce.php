@@ -4,7 +4,7 @@
  *
  * @link https://woocommerce.com/
  *
- * @package _s
+ * @package Tim_Doerzbacher_WP_Theme
  */
 
 /**
