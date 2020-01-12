@@ -11,6 +11,8 @@ module.exports = function(grunt) {
     fs = require('fs'),
     _ = require('lodash');
 
+  require('time-grunt')(grunt);
+
   var GRUNT_CONFIG_DIR = path.join(process.cwd(), 'grunt/config'),
     GRUNT_TASKS_DIR = path.join(process.cwd(), 'grunt/tasks');
 
