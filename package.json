@@ -1,0 +1,30 @@
+{
+  "name": "tim-doerzbacher-wp-theme",
+  "version": "1.0.0",
+  "description": "WordPress Theme 2020 Refresh of Tim-Doerzbacher.com website",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timmd909/tim-doerzbacher-wp-theme.git"
+  },
+  "keywords": [
+    "WordPress",
+    "theme"
+  ],
+  "author": "Tim Doerzbacher",
+  "license": "GPL-2.0-only",
+  "bugs": {
+    "url": "https://github.com/timmd909/tim-doerzbacher-wp-theme/issues"
+  },
+  "homepage": "https://github.com/timmd909/tim-doerzbacher-wp-theme#readme",
+  "devDependencies": {
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-sass": "^3.1.0",
+    "grunt": "^1.0.4",
+    "load-grunt-config": "^3.0.1",
+    "time-grunt": "^2.0.0"
+  }
+}
