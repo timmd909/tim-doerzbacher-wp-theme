@@ -25,6 +25,7 @@
     "font-awesome": "^4.7.0",
     "grunt": "^1.0.4",
     "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-copy": "^1.0.0",
     "grunt-sass": "^3.1.0",
     "load-grunt-config": "^3.0.1",
     "node-sass": "^4.13.0",
