@@ -22,14 +22,12 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 
-	<nav class="navbar navbar-default" role="navigation">
+	<nav class="navbar navbar-light navbar-expand-md" role="navigation">
 		<div class="container">
-			<div class="navbar-header">
-			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+			<div class="navbar-header flex-grow-1">
+			  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar">
 			    <span class="sr-only"><?php _e( 'Toggle navigation', 'dazzling' ); ?></span>
-			    <span class="icon-bar"></span>
-			    <span class="icon-bar"></span>
-			    <span class="icon-bar"></span>
+	        <span class="navbar-toggler-icon"></span>
 			  </button>
 
 				<div id="logo">
@@ -39,7 +37,6 @@
 						<?php if( get_header_image() != '' ) : ?>
 
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>"  height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="<?php bloginfo( 'name' ); ?>"/></a>
-
 
 						<?php endif; // header image was removed ?>
 
@@ -68,23 +65,23 @@
 		</div>
 	</nav><!-- .site-navigation -->
 
-        <div class="top-section">
+  <div class="top-section">
 		<?php dazzling_featured_slider(); ?>
 		<?php dazzling_call_for_action(); ?>
-        </div>
-        <div id="content" class="site-content container">
+  </div>
 
-            <div class="container main-content-area"><?php
+  <div id="content" class="site-content container">
 
-                global $post;
-                if( get_post_meta($post->ID, 'site_layout', true) ){
-                        $layout_class = get_post_meta($post->ID, 'site_layout', true);
-                }
-                else{
-                        $layout_class = of_get_option( 'site_layout' );
-                }
-                if( is_home() && is_sticky( $post->ID ) ){
-                        $layout_class = of_get_option( 'site_layout' );
-                }
-                ?>
-                <div class="row <?php echo $layout_class; ?>">
+    <div class="container main-content-area"><?php
+
+      global $post;
+      if( get_post_meta($post->ID, 'site_layout', true) ){
+        $layout_class = get_post_meta($post->ID, 'site_layout', true);
+      } else {
+        $layout_class = of_get_option( 'site_layout' );
+      }
+      if( is_home() && is_sticky( $post->ID ) ){
+        $layout_class = of_get_option( 'site_layout' );
+      }
+      ?>
+      <div class="row <?php echo $layout_class; ?>">

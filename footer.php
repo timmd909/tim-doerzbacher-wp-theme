@@ -7,9 +7,9 @@
  * @package dazzling
  */
 ?>
-                </div><!-- close .row -->
-            </div><!-- close .container -->
-        </div><!-- close .site-content -->
+          </div><!-- close .row -->
+      </div><!-- close .container -->
+  </div><!-- close .site-content -->
 
 	<div id="footer-area">
 		<div class="container footer-inner">
@@ -23,8 +23,8 @@
 					<?php dazzling_footer_links(); ?>
 				</nav>
 				<div class="copyright col-md-6">
-					<?php echo of_get_option( 'custom_footer_text', 'dazzling' ); ?>
-					<?php dazzling_footer_info(); ?>
+					<?php /* echo of_get_option( 'custom_footer_text', 'dazzling' ); */ ?>
+					<?php /* dazzling_footer_info(); */ ?>
 				</div>
 			</div><!-- .site-info -->
 			<div class="scroll-to-top"><i class="fa fa-angle-up"></i></div><!-- .scroll-to-top -->
