@@ -23,14 +23,14 @@ var paths = {
 
 /**
  * Webpack compilation: http://webpack.js.org, https://github.com/shama/webpack-stream#usage-with-gulp-watch
- * 
+ *
  * build_js()
  */
 
 function build_js() {
 	const compiler = require( 'webpack' ),
 		webpackStream = require( 'webpack-stream' );
-	
+
 	return gulp.src( paths.scripts.src )
 		.pipe(
 			webpackStream({
@@ -50,7 +50,7 @@ function build_js() {
 
 /**
  * SASS-CSS compilation: https://www.npmjs.com/package/gulp-sass
- * 
+ *
  * build_css()
  */
 
@@ -60,12 +60,12 @@ function build_css() {
 		sourcemaps = require( 'gulp-sourcemaps' ),
 		autoprefixer = require( 'autoprefixer' ),
 		cssnano = require( 'cssnano' );
-	
+
 	const plugins = [
 		autoprefixer(),
 		cssnano(),
 	];
-	
+
 	return gulp.src( paths.styles.src )
 		.pipe(
 			sourcemaps.init()
@@ -90,7 +90,7 @@ function build_css() {
 
 /**
  * Watch task: Webpack + SASS
- * 
+ *
  * $ gulp watch
  */
 
