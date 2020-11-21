@@ -40,7 +40,7 @@ function tim_doerzbacher_wp_theme_customize( $wp_customize ) {
 		'settings'    => 'header_logo',
 		'priority'    => 1,
 	) ) );
-	
+
 	// Predefined Navbar scheme
 	$wp_customize->add_setting( 'navbar_scheme', array(
 		'default'           => 'default',
@@ -54,11 +54,13 @@ function tim_doerzbacher_wp_theme_customize( $wp_customize ) {
 						'navbar-light bg-light'  => __( 'Default', 'tim-doerzbacher-wp-theme' ),
 						'navbar-dark bg-dark'    => __( 'Dark', 'tim-doerzbacher-wp-theme' ),
 						'navbar-dark bg-primary' => __( 'Primary', 'tim-doerzbacher-wp-theme' ),
+						'navbar-dark bg-danger'  => __( 'Danger', 'tim-doerzbacher-wp-theme' ),
+						'navbar-dark bg-success' => __( 'Success', 'tim-doerzbacher-wp-theme' ),
 					),
 		'settings' => 'navbar_scheme',
 		'priority' => 1,
 	) );
-	
+
 	// Fixed Header?
 	$wp_customize->add_setting( 'navbar_position', array(
 		'default'           => 'static',
@@ -76,7 +78,7 @@ function tim_doerzbacher_wp_theme_customize( $wp_customize ) {
 		'settings' => 'navbar_position',
 		'priority' => 2,
 	) );
-	
+
 	// Search?
 	$wp_customize->add_setting( 'search_enabled', array(
 		'default'           => '1',

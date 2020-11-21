@@ -1,12 +1,17 @@
 // Compile "main.scss" as "css/main.css"
 
+$navbar-dark-color: rgba(255, 255, 255, 0.65) !default;
+$navbar-dark-hover-color: rgba(255, 255, 255, 0.85) !default;
+
 /**
  * Add my modified Bootstrap
  */
 @import "../node_modules/timstrap/scss/timstrap";
 
 html {
-	@extend .bg-secondary;
+	// @extend .bg-danger;
+  @extend .bg-success;
+  // @extend .bg-primary;
 }
 
 /**
@@ -73,13 +78,17 @@ body.admin-bar {
 }
 
 #header {
+  border-bottom: 1px solid $border-color;
+
 	.menu-item {
 		a {
 			// invisible border to keep spacing consistent
 			border: 1px solid rgba(0, 0, 0, 0);
+      // color: $white;
 
 			&[aria-current="page"] {
 				border: 1px solid $white;
+        // color: $white;
 			}
 		}
 	}
@@ -97,7 +106,9 @@ body.admin-bar {
 /* Footer */
 
 #footer {
-	background-color: #FFF;
+	// background-color: #FFF;
+  // @extend .bg-danger;
+  @extend .bg-success;
 
 	p {
 		margin-top: 10px;

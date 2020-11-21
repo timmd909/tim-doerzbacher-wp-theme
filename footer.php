@@ -27,7 +27,7 @@
 						<div class="col-md-6">
 							<form class="form-inline search-form my-2 my-lg-0 justify-content-start justify-content-md-end" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 								<input type="text" id="s" name="s" class="form-control mr-2 w-auto d-inline-block" placeholder="<?php _e( 'Search', 'tim-doerzbacher-wp-theme' ); ?>" title="<?php echo esc_attr( __( 'Search', 'tim-doerzbacher-wp-theme' ) ); ?>" />
-								<button type="submit" id="searchsubmit" name="submit" class="btn btn-outline-dark my-2 my-sm-0"><?php _e( 'Search', 'tim-doerzbacher-wp-theme' ); ?></button>
+								<button type="submit" id="searchsubmit" name="submit" class="btn btn-success border my-2 my-sm-0"><?php _e( 'Search', 'tim-doerzbacher-wp-theme' ); ?></button>
 							</form>
 						</div>
 					<?php endif; ?>
