@@ -13,7 +13,7 @@ if ( is_readable( $theme_customizer ) ) {
 
 /**
  * Include Support for wordpress.com-specific functions.
- * 
+ *
  * @since v1.0
  */
 $theme_wordpresscom = get_template_directory() . '/inc/wordpresscom.php';
@@ -403,9 +403,9 @@ if ( ! function_exists( 'tim_doerzbacher_wp_theme_comment' ) ) :
 		$aria_req = ( $req ? " aria-required='true' required" : '' );
 		$consent  = ( empty( $commenter['comment_author_email'] ) ? '' : ' checked="checked"' );
 		$fields   = array(
-			'author'  => '<div class="form-group"><label for="author">' . __( 'Name', 'tim-doerzbacher-wp-theme' ) . ( $req ? '<span class="required">*</span>' : '' ) . '</label>' . 
+			'author'  => '<div class="form-group"><label for="author">' . __( 'Name', 'tim-doerzbacher-wp-theme' ) . ( $req ? '<span class="required">*</span>' : '' ) . '</label>' .
 						'<input type="text" id="author" name="author" class="form-control" value="' . esc_attr( $commenter['comment_author'] ) . '"' . $aria_req . ' /></div>',
-			'email'   => '<div class="form-group"><label for="email">' . __( 'Email', 'tim-doerzbacher-wp-theme' ) . ( $req ? '<span class="required">*</span>' : '' ) . '</label>' . 
+			'email'   => '<div class="form-group"><label for="email">' . __( 'Email', 'tim-doerzbacher-wp-theme' ) . ( $req ? '<span class="required">*</span>' : '' ) . '</label>' .
 						'<input type="email" id="email" name="email" class="form-control" value="' . esc_attr( $commenter['comment_author_email'] ) . '"' . $aria_req . ' /></div>',
 			'url'     => '',
 			'cookies' => '<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"' . $consent . ' /> ' .
@@ -492,3 +492,20 @@ function tim_doerzbacher_wp_theme_scripts_loader() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'tim_doerzbacher_wp_theme_scripts_loader' );
+
+// fix the WP admin bar at the top of the page
+add_action('wp_head', function () {
+	if (is_admin_bar_showing()) {
+		?>
+			<style<?php echo $type_attr; ?> media="screen">
+				html { margin-top: 0 !important; padding-top: 32px !important; }
+				@media screen and ( max-width: 782px ) {
+					html { margin-top: 0 !important; padding-top: 46px !important; }
+				}
+			</style>
+		<?php
+	} else {
+		?><!-- hmmmm... --><?php
+	}
+
+}, 100);

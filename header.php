@@ -78,7 +78,7 @@
 		</nav><!-- /#header -->
 	</header>
 
-	<main id="main" class="container"<?php
+	<main id="main" class="container flex-grow-1"<?php
 		if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) :
 			echo ' style="padding-top: 70px;"';
 		elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) :
