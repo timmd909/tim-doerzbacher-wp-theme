@@ -18,15 +18,15 @@
 		</main><!-- /#main -->
 		<footer id="footer" class="mt-2 bg-secondary border-top">
 			<div class="container">
-				<div class="row align-items-center">
+				<div class="row align-items-center flex-column-reverse flex-md-row">
 					<div class="col-md-6">
 						<p class="small text-white"><?php printf( __( '&copy; %1$s %2$s. All rights reserved.', 'tim-doerzbacher-wp-theme' ), esc_attr( date_i18n( 'Y' ) ), esc_attr( get_bloginfo( 'name', 'display' ) ) ); ?></p>
 					</div>
 
 					<?php if ( '1' === $search_enabled ) : ?>
 						<div class="col-md-6">
-							<form class="form-inline search-form my-2 my-lg-0" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-								<input type="text" id="s" name="s" class="form-control mr-sm-2" placeholder="<?php _e( 'Search', 'tim-doerzbacher-wp-theme' ); ?>" title="<?php echo esc_attr( __( 'Search', 'tim-doerzbacher-wp-theme' ) ); ?>" />
+							<form class="form-inline search-form my-2 my-lg-0 justify-content-start justify-content-md-end" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+								<input type="text" id="s" name="s" class="form-control mr-2 w-auto d-inline-block" placeholder="<?php _e( 'Search', 'tim-doerzbacher-wp-theme' ); ?>" title="<?php echo esc_attr( __( 'Search', 'tim-doerzbacher-wp-theme' ) ); ?>" />
 								<button type="submit" id="searchsubmit" name="submit" class="btn btn-outline-dark my-2 my-sm-0"><?php _e( 'Search', 'tim-doerzbacher-wp-theme' ); ?></button>
 							</form>
 						</div>
