@@ -1,3 +1,6 @@
+<?php
+	$search_enabled = get_theme_mod( 'search_enabled', '1' ); // Get custom meta-value
+?>
 			<?php
 				// If Single or Archive (Category, Tag, Author or a Date based page)
 				if ( is_single() || is_archive() ) :
@@ -13,12 +16,21 @@
 				endif;
 			?>
 		</main><!-- /#main -->
-		<footer id="footer">
+		<footer id="footer" class="mt-2 bg-secondary border-top">
 			<div class="container">
-				<div class="row">
+				<div class="row align-items-center">
 					<div class="col-md-6">
-						<p><?php printf( __( '&copy; %1$s %2$s. All rights reserved.', 'tim-doerzbacher-wp-theme' ), esc_attr( date_i18n( 'Y' ) ), esc_attr( get_bloginfo( 'name', 'display' ) ) ); ?></p>
+						<p class="small text-white"><?php printf( __( '&copy; %1$s %2$s. All rights reserved.', 'tim-doerzbacher-wp-theme' ), esc_attr( date_i18n( 'Y' ) ), esc_attr( get_bloginfo( 'name', 'display' ) ) ); ?></p>
 					</div>
+
+					<?php if ( '1' === $search_enabled ) : ?>
+						<div class="col-md-6">
+							<form class="form-inline search-form my-2 my-lg-0" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+								<input type="text" id="s" name="s" class="form-control mr-sm-2" placeholder="<?php _e( 'Search', 'tim-doerzbacher-wp-theme' ); ?>" title="<?php echo esc_attr( __( 'Search', 'tim-doerzbacher-wp-theme' ) ); ?>" />
+								<button type="submit" id="searchsubmit" name="submit" class="btn btn-outline-dark my-2 my-sm-0"><?php _e( 'Search', 'tim-doerzbacher-wp-theme' ); ?></button>
+							</form>
+						</div>
+					<?php endif; ?>
 
 					<?php
 						if ( has_nav_menu( 'footer-menu' ) ) : // see function register_nav_menus() in functions.php
@@ -45,7 +57,7 @@
 						<div class="col-md-12">
 							<?php
 								dynamic_sidebar( 'third_widget_area' );
-								
+
 								if ( current_user_can( 'manage_options' ) ) :
 							?>
 								<span class="edit-link"><a href="<?php echo esc_url( admin_url( 'widgets.php' ) ); ?>" class="badge badge-secondary"><?php _e( 'Edit', 'tim-doerzbacher-wp-theme' ); ?></a></span><!-- Show Edit Widget link -->

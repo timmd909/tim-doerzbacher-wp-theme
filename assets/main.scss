@@ -5,6 +5,10 @@
  */
 @import "../node_modules/timstrap/scss/timstrap";
 
+html {
+	@extend .bg-secondary;
+}
+
 /**
  * General
  */
@@ -66,6 +70,20 @@ body.admin-bar {
 
 .navbar-static-top {
 	margin-bottom: $grid-gutter-width;
+}
+
+#header {
+	.menu-item {
+		a {
+			// invisible border to keep spacing consistent
+			border: 1px solid rgba(0, 0, 0, 0);
+
+			&[aria-current="page"] {
+				border: 1px solid $white;
+			}
+		}
+	}
+
 }
 
 
@@ -134,7 +152,8 @@ body.admin-bar {
 
 .entry-meta {
 	font-size: small;
-	margin-top: $grid-gutter-width/2;
+	@extend .mt-1;
+	// margin-top: $grid-gutter-width/2;
 }
 
 .single {

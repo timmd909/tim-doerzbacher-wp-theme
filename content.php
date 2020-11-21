@@ -4,7 +4,6 @@
  *
  */
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php if ( is_sticky() ) : ?>
@@ -15,14 +14,14 @@
 		<?php else : ?>
 			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'tim-doerzbacher-wp-theme' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 		<?php endif; ?>
-		
+
 		<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
 				<?php tim_doerzbacher_wp_theme_article_posted_on(); ?>
 			</div><!-- /.entry-meta -->
 		<?php endif; ?>
 	</header><!-- /.entry-header -->
-	
+
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 		<div class="entry-summary">
 			<?php the_excerpt(); ?>
@@ -33,7 +32,7 @@
 			<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'tim-doerzbacher-wp-theme' ) . '</span>', 'after' => '</div>' ) ); ?>
 		</div><!-- /.entry-content -->
 	<?php endif; ?>
-		
+
 	<footer class="entry-meta">
 		<?php
 			$show_sep = false;
@@ -69,7 +68,7 @@
 				endif; // End if $tags_list
 			endif; // End if 'post' == get_post_type()
 		?>
-	
+
 		<?php if ( comments_open() ) : ?>
 			<?php if ( $show_sep ) : ?>
 				<span class="sep"> | </span>
@@ -80,9 +79,9 @@
 				?>
 			</span>
 		<?php endif; // End if comments_open() ?>
-		
+
 		<a href="<?php echo get_the_permalink(); ?>" class="btn btn-secondary"><?php _e( 'more', 'tim-doerzbacher-wp-theme' ); ?></a>
-		
+
 		<?php edit_post_link( __( 'Edit', 'tim-doerzbacher-wp-theme' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- /.entry-meta -->
 </article><!-- /#post-<?php the_ID(); ?> -->

@@ -6,7 +6,7 @@
 if ( is_active_sidebar( 'primary_widget_area' ) || is_archive() || is_single() ) :
 
 ?>
-<div id="sidebar" class="col-md-4 col-sm-12">
+<div id="sidebar" class="col-12 col-md-4 col-lg-3">
 	<?php
 		if ( is_active_sidebar( 'primary_widget_area' ) ) :
 	?>
@@ -44,7 +44,8 @@ if ( is_active_sidebar( 'primary_widget_area' ) || is_archive() || is_single() )
 									endif;
 									$month_check = $month;
 
-								$output .= '<h4><a href="' . esc_url( get_the_permalink() ) . '" title="' . esc_attr( sprintf( __( 'Permalink to %s', 'tim-doerzbacher-wp-theme' ), the_title_attribute( 'echo=0' ) ) ) . '" rel="bookmark">' . esc_html( get_the_title() ) . '</a></h4>';
+								// $output .= '<h4><a href="' . esc_url( get_the_permalink() ) . '" title="' . esc_attr( sprintf( __( 'Permalink to %s', 'tim-doerzbacher-wp-theme' ), the_title_attribute( 'echo=0' ) ) ) . '" rel="bookmark">' . esc_html( get_the_title() ) . '</a></h4>';
+								$output .= '<div><a href="' . esc_url( get_the_permalink() ) . '" title="' . esc_attr( sprintf( __( 'Permalink to %s', 'tim-doerzbacher-wp-theme' ), the_title_attribute( 'echo=0' ) ) ) . '" rel="bookmark">' . esc_html( get_the_title() ) . '</a></div>';
 								$output .= '</li>';
 							endwhile;
 						endif;
