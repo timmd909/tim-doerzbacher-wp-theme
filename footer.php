@@ -20,7 +20,7 @@
 			<div class="container">
 				<div class="row align-items-center flex-column-reverse flex-md-row">
 					<div class="col-md-6">
-						<p class="small text-white"><?php printf( __( '&copy; %1$s %2$s. All rights reserved.', 'tim-doerzbacher-wp-theme' ), esc_attr( date_i18n( 'Y' ) ), esc_attr( get_bloginfo( 'name', 'display' ) ) ); ?></p>
+						<p class="small"><?php printf( __( '&copy; %1$s %2$s. All rights reserved.', 'tim-doerzbacher-wp-theme' ), esc_attr( date_i18n( 'Y' ) ), esc_attr( get_bloginfo( 'name', 'display' ) ) ); ?></p>
 					</div>
 
 					<?php if ( '1' === $search_enabled ) : ?>

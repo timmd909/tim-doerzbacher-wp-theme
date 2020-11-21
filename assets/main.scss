@@ -1,5 +1,7 @@
 // Compile "main.scss" as "css/main.css"
 
+$gray-100: #f0f1f2 !default;
+
 $navbar-dark-color: rgba(255, 255, 255, 0.65) !default;
 $navbar-dark-hover-color: rgba(255, 255, 255, 0.85) !default;
 
@@ -10,8 +12,9 @@ $navbar-dark-hover-color: rgba(255, 255, 255, 0.85) !default;
 
 html {
 	// @extend .bg-danger;
-  @extend .bg-success;
+  // @extend .bg-success;
   // @extend .bg-primary;
+  @extend .bg-light;
 }
 
 /**
@@ -78,17 +81,18 @@ body.admin-bar {
 }
 
 #header {
-  border-bottom: 1px solid $border-color;
+  @extend .border-bottom;
+  @extend .border-primary;
+  @extend .py-0;
 
 	.menu-item {
 		a {
 			// invisible border to keep spacing consistent
-			border: 1px solid rgba(0, 0, 0, 0);
+			// border: 1px solid rgba(0, 0, 0, 0);
       // color: $white;
 
 			&[aria-current="page"] {
-				border: 1px solid $white;
-        // color: $white;
+        // hmmm....
 			}
 		}
 	}
@@ -108,7 +112,10 @@ body.admin-bar {
 #footer {
 	// background-color: #FFF;
   // @extend .bg-danger;
-  @extend .bg-success;
+  // @extend .bg-success;
+  @extend .bg-light;
+  @extend .border-top;
+  @extend .border-danger;
 
 	p {
 		margin-top: 10px;
