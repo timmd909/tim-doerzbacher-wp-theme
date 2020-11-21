@@ -71,7 +71,9 @@ function build_css() {
 			sourcemaps.init()
 		)
 		.pipe(
-			sass()
+			sass({
+				includePaths: 'node_modules/bootstrap/scss/',
+			})
 				.on( 'error', sass.logError )
 		)
 		.pipe(
