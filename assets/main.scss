@@ -1,5 +1,9 @@
 // Compile "main.scss" as "css/main.css"
 
+// Vacillating on whether this should be a standard part of the
+// Timstrap styles. It makes the resume font too small.
+$font-size-base: 1rem;
+
 $gray-100: #f0f1f2 !default;
 
 $navbar-dark-color: rgba(255, 255, 255, 0.65) !default;
