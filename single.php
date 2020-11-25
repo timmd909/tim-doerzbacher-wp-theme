@@ -26,7 +26,9 @@ if ( $count_posts->publish > '1' ) :
 	$next_post = get_next_post();
 	$prev_post = get_previous_post();
 ?>
-<hr class="mt-5">
+<?php if (comments_open()) { ?>
+	<hr class="mt-5">
+<?php } ?>
 <div class="post-navigation d-flex justify-content-between">
 	<?php
 		if ( $prev_post ) {

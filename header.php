@@ -90,7 +90,7 @@
 			if ( is_single() || is_archive() ) :
 		?>
 			<div class="row">
-				<div class="col-12 col-md-8 col-lg-9">
+				<div class="col-12 col-lg-9">
 		<?php
 			endif;
 		?>

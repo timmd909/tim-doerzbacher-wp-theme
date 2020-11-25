@@ -59,7 +59,9 @@
 			);
 		?>
 
-		<hr>
+		<?php if (comments_open()) { ?>
+			<hr>
+		<?php } ?>
 
 		<?php get_template_part( 'author', 'bio' ); ?>
 

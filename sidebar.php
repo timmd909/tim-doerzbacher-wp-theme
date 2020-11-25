@@ -6,7 +6,7 @@
 if ( is_active_sidebar( 'primary_widget_area' ) || is_archive() || is_single() ) :
 
 ?>
-<div id="sidebar" class="col-12 col-md-4 col-lg-3">
+<div id="sidebar" class="col-12 col-lg-3">
 	<?php
 		if ( is_active_sidebar( 'primary_widget_area' ) ) :
 	?>
