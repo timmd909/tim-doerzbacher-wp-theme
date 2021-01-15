@@ -1,0 +1,16 @@
+img {
+	vertical-align: middle;
+}
+
+@media (max-width: 576px) {
+}
+@media (max-width: 768px) {
+  .wp-block-image .alignleft,
+  .wp-block-image .alignright {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
+}
+@media (max-width: 992px) {
+}
