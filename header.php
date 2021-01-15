@@ -24,6 +24,19 @@
 <div id="wrapper">
 
 	<header>
+		<div class="d-none d-print-block" style="border-bottom: 1px solid #007bff; margin-bottom: 1rem;">
+			<?php
+				$header_logo = get_theme_mod( 'header_logo' ); // Get custom meta-value
+
+				if ( ! empty( $header_logo ) ) :
+					?><img style="max-height: 4rem" src="<?php echo esc_url( $header_logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
+						class="mr-2"/><?php
+				endif;
+
+				echo esc_attr( get_bloginfo( 'name', 'display' ) );
+
+			?>
+		</div>
 		<nav id="header" class="navbar navbar-expand-md <?php echo $navbar_scheme; if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
 			<div class="container">
 				<div class="d-flex flex-nowrap flex-grow-1 text-truncate">

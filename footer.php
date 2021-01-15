@@ -16,7 +16,10 @@
 				endif;
 			?>
 		</main><!-- /#main -->
-		<footer id="footer" class="mt-2 bg-secondary border-top">
+		<footer class="mt-2 border-top d-none d-print-block pt-1 text-right">
+			&copy; <php echo date('Y') ?> Tim-Doerzbacher.com. All rights reserved.
+		</footer>
+		<footer id="footer" class="mt-2 bg-secondary border-top d-print-none">
 			<div class="container">
 				<div class="row align-items-center flex-column-reverse flex-md-row">
 					<div class="col-md-6">
