@@ -509,3 +509,10 @@ add_action('wp_head', function () {
 	}
 
 }, 100);
+
+
+// really wish this sort of "read more" stuff had a sensible default
+add_filter('excerpt_more', 'tim_doerzbacher_wp_theme_excerpt_read_more_link');
+function tim_doerzbacher_wp_theme_excerpt_read_more_link($more) {
+	return '...&nbsp; <a class="read-more" href="'. get_permalink() . '">Read More</a>';
+}
