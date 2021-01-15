@@ -1,0 +1,34 @@
+
+.wp-block-latest-posts__list {
+  padding-left: 0;
+
+  li {
+    @extend .card;
+    @extend .d-block;
+
+    padding: 1.25rem;
+    margin: 0 0 1rem 0;
+
+    a {
+      @extend .h3;
+      float: left;
+    }
+
+    a.read-more {
+      float: none;
+      font-size: inherit;
+    }
+
+    .wp-block-latest-posts__post-date {
+      float: right;
+      font-size: 1rem;
+      margin-top: 0.25rem;
+    }
+
+    .wp-block-latest-posts__post-excerpt {
+      clear: both;
+      margin: 0;
+    }
+
+  }
+}
