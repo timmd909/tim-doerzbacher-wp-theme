@@ -10,6 +10,11 @@
   margin-left: auto;
 }
 
+ol.wp-block,
+ul.wp-block {
+  padding-left: 3.5rem;
+}
+
 @media (min-width: 576px) { .wp-block { max-width: 540px !important; } }
 @media (min-width: 768px) { .wp-block { max-width: 720px !important; } }
 @media (min-width: 992px) { .wp-block { max-width: 960px !important; } }
