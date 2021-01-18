@@ -96,6 +96,13 @@ function build_css() {
  * $ gulp watch
  */
 
+gulp.task('default',
+	function () {
+		build_js();
+		build_css();
+	}
+);
+
 gulp.task('watch',
 	function () {
 		// Modify "dev_url" constant and uncomment "server.init()" to use browser sync
