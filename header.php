@@ -41,7 +41,7 @@
 			<div class="container">
 				<div class="d-flex flex-nowrap flex-grow-1 text-truncate">
 					<div class="d-flex flex-nowrap text-truncate flex-grow-1">
-						<a class="navbar-brand text-truncate" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+						<a class="d-flex navbar-brand text-truncate align-items-center" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 							<?php
 								$header_logo = get_theme_mod( 'header_logo' ); // Get custom meta-value
 
