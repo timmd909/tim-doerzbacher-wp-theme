@@ -15,18 +15,30 @@ $navbar-dark-hover-color: rgba(255, 255, 255, 0.85) !default;
 @import "../node_modules/timstrap/scss/timstrap";
 
 html {
-	// @extend .bg-danger;
-  // @extend .bg-success;
-  // @extend .bg-primary;
-  @extend .bg-light;
+  background-color: $light;
   margin-top: 0 !important;
+}
+@media print {
+  html {
+    background: none;
+  }
 }
 
 html,
-body,
-#wrapper {
+body {
   @extend .h-100;
   overflow: auto;
+}
+
+@media print {
+  html, body {
+    overflow: visible;
+  }
+}
+
+// avoid splitting list items across page breaks
+li {
+  break-inside: avoid;
 }
 
 #wrapper {
@@ -96,8 +108,7 @@ body.admin-bar {
 }
 
 #header {
-  @extend .border-bottom;
-  @extend .border-primary;
+  border-bottom: 0.25rem solid $blue;
   @extend .py-0;
 
 	.menu-item {
@@ -125,12 +136,10 @@ body.admin-bar {
 /* Footer */
 
 #footer {
-	// background-color: #FFF;
-  // @extend .bg-danger;
-  // @extend .bg-success;
-  @extend .bg-light;
-  @extend .border-top;
-  @extend .border-danger;
+  // @extend .bg-light;
+  background-color: $light;
+  border-top: 0.25rem solid $danger;
+  padding: 0.25rem 0;
 
 	p {
 		margin-top: 10px;
@@ -143,6 +152,12 @@ body.admin-bar {
 			}
 		}
 	}
+}
+@media print {
+  #footer {
+    // background: none !important;
+    background: red !important;
+  }
 }
 
 

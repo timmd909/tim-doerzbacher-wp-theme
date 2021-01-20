@@ -6,8 +6,8 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'col-12' ); ?>>
 	<div class="card mb-4">
-		<header class="card-body card-body pb-0">
-			<h3 class="card-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'tim-doerzbacher-wp-theme' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+		<header class="card-body pb-0">
+			<h3 class="card-title m-0"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'tim-doerzbacher-wp-theme' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 
 			<?php if ( 'post' === get_post_type() ) : ?>
 				<div class="card-text entry-meta">

@@ -4,25 +4,38 @@
 
   li {
     @extend .card;
-    @extend .d-block;
+    @extend .d-flex;
+    @extend .flex-column;
+
+    position: relative;
 
     padding: 1.25rem;
     margin: 0 0 1rem 0;
 
-    a {
+    > a {
       @extend .h3;
-      float: left;
+      @extend .flex-grow-1;
+      margin-bottom: 0.25rem !important;
+      padding-bottom: 0.25rem !important;
+      text-indent: 5.5rem;
+      border-bottom: 1px solid $border-color;
     }
 
     a.read-more {
       float: none;
       font-size: inherit;
+      margin-bottom: 0.5rem;
     }
 
     .wp-block-latest-posts__post-date {
-      float: right;
+      position: absolute;
+      top: 1.25rem;
+      left: 1.25rem;
+
       font-size: 1rem;
-      margin-top: 0.25rem;
+      line-height: 2rem;
+      white-space: nowrap;
+      width: 6rem;
     }
 
     .wp-block-latest-posts__post-excerpt {
