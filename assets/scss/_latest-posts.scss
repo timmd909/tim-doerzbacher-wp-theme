@@ -4,8 +4,7 @@
 
   li {
     @extend .card;
-    @extend .d-flex;
-    @extend .flex-column;
+    @extend .d-block;
 
     position: relative;
 
@@ -14,33 +13,34 @@
 
     > a {
       @extend .h3;
-      @extend .flex-grow-1;
+      @extend .d-block;
       margin-bottom: 0.25rem !important;
-      padding-bottom: 0.25rem !important;
-      text-indent: 5.5rem;
-      border-bottom: 1px solid $border-color;
+      padding-bottom: 0 !important;
     }
 
     a.read-more {
-      float: none;
       font-size: inherit;
       margin-bottom: 0.5rem;
     }
 
     .wp-block-latest-posts__post-date {
-      position: absolute;
-      top: 1.25rem;
-      left: 1.25rem;
-
-      font-size: 1rem;
-      line-height: 2rem;
+      font-size: 0.9rem;
       white-space: nowrap;
       width: 6rem;
+      margin-bottom: 0.5rem;
+
+      &::before {
+        content: 'Posted on ';
+      }
     }
 
     .wp-block-latest-posts__post-excerpt {
-      clear: both;
       margin: 0;
+    }
+
+    .wp-block-latest-posts__featured-image {
+      &.alignleft { float: left; }
+      &.alignright { float: right; }
     }
 
   }
