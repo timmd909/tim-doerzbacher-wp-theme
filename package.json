@@ -28,7 +28,7 @@
     "jquery": ">=3.3.0",
     "popper.js": "^1.14.0",
     "timstrap": "github:timmd909/timstrap#c7946d2adbe0ef77e313900cda3ffcc29524ae8d",
-    "webpack": "^4.1.0",
-    "webpack-stream": "^5.2.1"
+    "webpack": "^5.75.0",
+    "webpack-stream": "^7.0.0"
   }
 }
